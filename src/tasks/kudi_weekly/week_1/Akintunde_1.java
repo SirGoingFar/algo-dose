@@ -1,4 +1,4 @@
-package week_1;
+package tasks.kudi_weekly.week_1;
 
 public class Akintunde_1 {
 

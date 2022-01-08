@@ -1,4 +1,4 @@
-package week_4;
+package tasks.kudi_weekly.week_4;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -104,10 +104,11 @@ public class Akintunde {
 
         String[] calls = callLogStream.split("\n");
 
-        HashMap<String, Integer> phoneDurationMap = getCallDurationByPhoneNumber(calls);
+        Map<String, Integer> phoneDurationMap = getCallDurationByPhoneNumber(calls);
 
         String freeCallPhoneNumber = getPhoneNumberForFreeCall(phoneDurationMap);
 
+        System.out.println(phoneDurationMap);
         //var_dump phone number
         System.out.println("Phone Number for free call: ".concat(freeCallPhoneNumber));
 
@@ -126,7 +127,7 @@ public class Akintunde {
             if (value < FIVE_MINUTES_IN_SECONDS)
                 costSum += (value * 3);
             else
-                costSum += (Math.ceil(value / FIVE_MINUTES_IN_SECONDS_FLOAT) * 150);
+                costSum += (Math.ceil(value / 60.0) * 150);
         }
 
 
@@ -134,7 +135,7 @@ public class Akintunde {
 
     }
 
-    private static String getPhoneNumberForFreeCall(HashMap<String, Integer> map) {
+    private static String getPhoneNumberForFreeCall(Map<String, Integer> map) {
 
         //Group Phone Number by the Call Duration - ASC
         Map<Integer, ArrayList<String>> reverseMap = new HashMap<>(
@@ -181,6 +182,7 @@ public class Akintunde {
                 //If the segment sum is LESSER than the segment sum of the last phone number with LOWEST SUM, pick current phone number
                 if (phoneSplitSum < sum) {
                     smallestIndex = i;
+                    sum = phoneSplitSum;
                 }
             }
 
@@ -190,9 +192,9 @@ public class Akintunde {
 
     }
 
-    private static HashMap<String, Integer> getCallDurationByPhoneNumber(String[] calls) {
+    private static Map<String, Integer> getCallDurationByPhoneNumber(String[] calls) {
 
-        HashMap<String, Integer> hm = new HashMap<>();
+        Map<String, Integer> hm = new HashMap<>();
 
         for (String call : calls) {
 

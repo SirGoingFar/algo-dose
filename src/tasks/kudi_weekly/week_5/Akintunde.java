@@ -1,11 +1,10 @@
-package week_5;
+package tasks.kudi_weekly.week_5;
 
 import org.w3c.dom.Node;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
-import java.util.TimeZone;
 
 public class Akintunde {
 

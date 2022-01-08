@@ -1,4 +1,4 @@
-package week_1;
+package tasks.kudi_weekly.week_1;
 
 import java.util.HashSet;
 import java.util.Set;

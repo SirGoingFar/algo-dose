@@ -1,9 +1,7 @@
-package week_3;
+package tasks.kudi_weekly.week_3;
 
-import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
-import java.util.Date;
 import java.util.Locale;
 
 public class Akintunde {

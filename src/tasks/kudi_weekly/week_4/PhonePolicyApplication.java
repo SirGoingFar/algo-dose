@@ -1,4 +1,4 @@
-package week_4;
+package tasks.kudi_weekly.week_4;
 
 //Submission By Mesh
 class PhonePolicy {

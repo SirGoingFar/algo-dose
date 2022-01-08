@@ -1,4 +1,4 @@
-package week_2;
+package tasks.kudi_weekly.week_2;
 
 import java.util.*;
 import java.util.stream.Collectors;
