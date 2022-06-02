@@ -1,4 +1,4 @@
-package preparation.cracking_coding_interview.examples;
+package preparation.crackingCodingInterview.examples;
 
 import static java.lang.Math.sqrt;
 
