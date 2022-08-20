@@ -44,7 +44,7 @@ public class Playtech {
         public void add(int identifier) {
 
             //if identifier exist - throw
-            boolean nodeExists = isNodeExists(identifier);
+            boolean nodeExists = doesNodeExist(identifier);
             if (nodeExists) {
                 throw new IllegalArgumentException("Node already exists in the graph");
             }
@@ -52,7 +52,7 @@ public class Playtech {
             nodes.add(new Node(identifier));
         }
 
-        private boolean isNodeExists(int identifier) {
+        private boolean doesNodeExist(int identifier) {
             return (int) nodes.stream().filter(n -> n.getIdentifier() == identifier).count() > 0;
         }
 
@@ -62,7 +62,7 @@ public class Playtech {
 
         public void connect(int fromId, int toId) {
 
-            if (!isNodeExists(fromId) || !isNodeExists(toId)) {
+            if (!doesNodeExist(fromId) || !doesNodeExist(toId)) {
                 throw new IllegalArgumentException("Either or both nodes does not exists");
             }
 
