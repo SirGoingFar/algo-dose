@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="StacktraceSettings">
+    <option name="folders">
+      <set>
+        <option value="$PROJECT_DIR$/src" />
+      </set>
+    </option>
+    <option name="packages">
+      <set>
+        <option value="interviews.agoda" />
+        <option value="interviews.airtel" />
+        <option value="interviews.amex" />
+        <option value="interviews.flatworld" />
+        <option value="interviews.payever" />
+        <option value="interviews.playtech" />
+        <option value="interviews.vodafone" />
+        <option value="interviews.wise.preparation" />
+        <option value="interviews.wise.test" />
+        <option value="preparation.crackingCodingInterview.examples" />
+        <option value="preparation.grokking.fastAndSlowPointers" />
+        <option value="preparation.grokking.mergeIntervals" />
+        <option value="preparation.grokking.slidingWindow" />
+        <option value="preparation.grokking.twoPointers" />
+        <option value="tasks.kudi_weekly" />
+        <option value="tasks.kudi_weekly.week_1" />
+        <option value="tasks.kudi_weekly.week_2" />
+        <option value="tasks.kudi_weekly.week_3" />
+        <option value="tasks.kudi_weekly.week_4" />
+        <option value="tasks.kudi_weekly.week_5" />
+      </set>
+    </option>
+  </component>
+</project>
