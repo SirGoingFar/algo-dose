@@ -31,7 +31,7 @@ package interviews.wise.test;
  *     }
  *
  */
-public class TechnicalInterview {
+/*public class TechnicalInterview {
 
     @RestController
     @RequestMapping("/transsaction")
@@ -152,4 +152,4 @@ public class TechnicalInterview {
         private String state;
     }
 
-}
+}*/
