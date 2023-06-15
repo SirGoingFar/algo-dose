@@ -1,6 +1,5 @@
 package preparation.grokking.twoPointers.problems;
 
-import org.junit.platform.commons.util.StringUtils;
 
 import java.util.Objects;
 
@@ -30,7 +29,7 @@ public class BackspaceCompare {
      * Space complexity O(2N) for the StringBuilder & Char array = O(N) asymptotically
      * */
     private static String applyBackSpace(String str) {
-        if (StringUtils.isBlank(str)) {
+        if (str == null || str.isBlank()) {
             return "";
         }
 
