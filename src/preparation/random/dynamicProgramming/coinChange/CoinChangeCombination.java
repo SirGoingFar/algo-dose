@@ -10,7 +10,7 @@ import java.util.*;
  */
 public class CoinChangeCombination {
     public static void main(String[] args) {
-        System.out.printf("Coin combination for change amount is %s\n", changeCombination(7, new int[]{1, 5, 2, 7, 9}));
+        System.out.printf("Coin combination for change amount is %s\n", changeCombination(11, new int[]{1, 5, 2, 7, 9}));
     }
 
     private static List<Integer> changeCombination(int amount, int[] coins) {
@@ -31,9 +31,6 @@ public class CoinChangeCombination {
         //Set each array element to default
         Arrays.fill(resultCache, new ArrayList<>());
 
-        //Set the base case to allow for dynamic programming technique
-        resultCache[0] = Collections.emptyList();
-
         //Using Depth-first search - backtracking (i.e. for amount: 0 -> (amount + 1)), search for coin combination for change amount.
         //Leverage result cache for memoization
         for (int amt = 1; amt < cacheSize; amt++) {
@@ -47,15 +44,24 @@ public class CoinChangeCombination {
                     }
                     resultCache[amt] = newCoinCombinationList;
                 }
+
+                if (!resultCache[amount].isEmpty() && getSum(resultCache[amount]) == amount) {
+                    break; //a valid coin combination is available for amount, safe to exit
+                }
+
             }
 
-            if (!resultCache[amount].isEmpty()) {
+            if (!resultCache[amount].isEmpty() && getSum(resultCache[amount]) == amount) {
                 break; //a valid coin combination is available for amount, safe to exit
             }
         }
 
         //If coin combination exist for change, return it. Else an empty combination, i.e. no coin combination for change.
-        return resultCache[amount].isEmpty() ? Collections.emptyList() : resultCache[amount];
+        return resultCache[amount].isEmpty() || getSum(resultCache[amount]) != amount ? Collections.emptyList() : resultCache[amount];
+    }
+
+    private static int getSum(List<Integer> coinList) {
+        return coinList.stream().mapToInt(Integer::intValue).sum();
     }
 
     private static boolean isCombinationAllowed(List<Integer> newCoinCombination, HashMap<Integer, Integer> coinMap) {
