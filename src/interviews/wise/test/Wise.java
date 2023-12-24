@@ -93,7 +93,7 @@ public class Main {
         }
     }
 
-    private static BigDecimal getCurrencuRate(String currencyPair) {
+    private static BigDecimal getCurrencyRate(String currencyPair) {
 
         BigDecimal libraryRate = provider.getRate(currencyPair);
 
